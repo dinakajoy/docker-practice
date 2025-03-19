@@ -8,16 +8,18 @@ A simple full-stack user profile application that allows users to update their p
 - Clone the repository and cd into the project directory
 - Install Docker on your machine 
 - Run `npm install` or `yarn add` to install all project dependencies  
-- Run `docker-compose -f mongo.yml up -d` to spin up a mongodb and mongo-express containers 
-- Run `docker-compose -f mongo.yml down` to stop the running containers  
-- Run `docker-compose -f mongo.yml down -v` to remove containers   
+- Run `docker-compose -f mongo.yml up -d` to spin up a mongodb and mongo-express containers  
 - Create .env file and add your database details (check .env.example for guidiance)  
 - Run `npm run develop` or `yarn develop` to start local server which will run on localhost:1337  
+- Run `docker-compose -f mongo.yml down` to stop the running containers  
+- Run `docker-compose -f mongo.yml down -v` to remove containers   
 
 --- 
 
 2. Option 2
-Run `docker-compose up --build`
+Run `docker-compose up --build` to spin up a app, mongodb and mongo-express containers 
+- Run `docker-compose -f mongo.yml down` to stop the running containers  
+- Run `docker-compose -f mongo.yml down -v` to remove containers 
 
 ### Running the image
 Run - `docker run --name profile-page-container -p 1337:1337 -it profile-page` 
